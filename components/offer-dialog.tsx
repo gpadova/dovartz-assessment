@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dialog";
 import { WHATSAPP_NUMBER } from "@/lib/constants";
 import Lottie, { LottieOptions } from "lottie-react";
-import giftAnimation from "../assets/lotties/gift.json";
+import giftAnimation from "@/assets/lotties/gift.json";
 
 import { FaWhatsapp } from "react-icons/fa";
 
