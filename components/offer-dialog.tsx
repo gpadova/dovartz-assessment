@@ -34,13 +34,13 @@ export function OfferDialog({
         </DialogHeader>
         <div className="text-center p-6">
           <div className="mb-0 flex flex-col items-center">
+            <Gift className="w-16 h-16 text-primary mb-6" />
             <h1 className="text-3xl font-bold text-foreground mb-0">
               Oferta Especial!
             </h1>
             {/* <div className="max-w-72 flex justify-center">
               <Lottie animationData={giftAnimation} loop={true} size={100} />
             </div> */}
-            <Gift className="w-16 h-16 text-primary mb-6" />
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               Por estar interessado em automação residencial, você ganhou uma
             </p>
