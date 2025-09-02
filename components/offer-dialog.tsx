@@ -9,8 +9,7 @@ import {
 } from "@/components/ui/dialog";
 import { WHATSAPP_NUMBER } from "@/lib/constants";
 import Lottie, { LottieOptions } from "lottie-react";
-import giftAnimation from "@/assets/lotties/gift.json";
-
+import { Gift } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 interface OfferDialogProps {
@@ -38,9 +37,10 @@ export function OfferDialog({
             <h1 className="text-3xl font-bold text-foreground mb-0">
               Oferta Especial!
             </h1>
-            <div className="max-w-72 flex justify-center">
+            {/* <div className="max-w-72 flex justify-center">
               <Lottie animationData={giftAnimation} loop={true} size={100} />
-            </div>
+            </div> */}
+            <Gift className="w-16 h-16 text-primary mb-6" />
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               Por estar interessado em automação residencial, você ganhou uma
             </p>
