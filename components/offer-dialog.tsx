@@ -24,7 +24,17 @@ export function OfferDialog({
   onContinue,
 }: OfferDialogProps) {
   const handleWhatsAppContact = () => {
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}`, "_blank");
+    const message = encodeURIComponent(
+      `Olá! Estou interessado em automação residencial e gostaria de aceitar a oferta de visita técnica gratuita.
+
+Acabei de ver a promoção e quero aproveitar os benefícios:
+✅ Avaliação completa gratuita
+✅ Projeto personalizado sem custo
+✅ 10% de desconto no orçamento
+
+Aguardo contato para agendarmos!`
+    );
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
   };
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -32,15 +42,13 @@ export function OfferDialog({
         <DialogHeader>
           <DialogTitle className="sr-only">Oferta Especial</DialogTitle>
         </DialogHeader>
-        <div className="text-center p-6">
-          <div className="mb-0 flex flex-col items-center">
+        <div className="text-center p-0">
+          <div className="mb-0 flex flex-col items-center justify-center">
             <Gift className="w-16 h-16 text-primary mb-6" />
             <h1 className="text-3xl font-bold text-foreground mb-0">
               Oferta Especial!
             </h1>
-            {/* <div className="max-w-72 flex justify-center">
-              <Lottie animationData={giftAnimation} loop={true} size={100} />
-            </div> */}
+
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
               Por estar interessado em automação residencial, você ganhou uma
             </p>
